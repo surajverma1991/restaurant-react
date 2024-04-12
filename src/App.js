@@ -5,10 +5,6 @@ const App = () => {
   return (
     <>
       <Resturant/>
-      {/* <UseState/> */}
-      {/* <UseEffect/> */}
-      {/* <UseReducer/> */}
-      {/* <Todo/> */}
     </>
   );
 }

@@ -10,7 +10,7 @@ const uniqueList = [
       return curElem.category;
     })
   ),
-  "All"
+  "All",
 ];
 
 // console.log(uniqueList);
@@ -20,10 +20,9 @@ const Resturant = () => {
   const [menuList, setmenuList] = useState(uniqueList);
 
   const filterItem = (category) => {
-
-    if(category === "All") {
-        setMenuData(Menu);
-        return;
+    if (category === "All") {
+      setMenuData(Menu);
+      return;
     }
 
     const updatedList = Menu.filter((curElem) => {
@@ -35,7 +34,7 @@ const Resturant = () => {
 
   return (
     <>
-      <Navbar filterItem={filterItem} menuList={menuList}/>
+      <Navbar filterItem={filterItem} menuList={menuList} />
       <MenuCard menuData={menuData} />
     </>
   );

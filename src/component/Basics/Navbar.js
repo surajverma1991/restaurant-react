@@ -8,7 +8,8 @@ const Navbar = ({ filterItem, menuList }) => {
           {menuList.map((curElem, id) => {
             return (
               <button
-                className="btn-group__item" key={id}
+                className="btn-group__item"
+                key={id}
                 onClick={() => filterItem(curElem)}
               >
                 {curElem}

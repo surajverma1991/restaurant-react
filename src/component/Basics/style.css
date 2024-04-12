@@ -1,14 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 html {
   background: #faf7f2;
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
@@ -42,6 +44,7 @@ html {
   max-width: 100%;
   height: 300px;
   display: block;
+  margin: auto;
 }
 
 .card {
@@ -80,7 +83,6 @@ html {
 }
 
 .card-title {
-  font-family: "Cormorant Garamond", serif;
   font-size: 40px;
   font-weight: 600;
   line-height: 60px;
@@ -89,7 +91,6 @@ html {
 }
 
 .card-description {
-  /* display: inline-block; */
   font-weight: 300;
   line-height: 22px;
   margin: 10px 0;
@@ -113,7 +114,7 @@ html {
   height: 1px;
   position: absolute;
   top: 9px;
-  width: 70%;
+  width: calc(100% - 70px);
 }
 
 .card-tag {
@@ -126,7 +127,7 @@ html {
 
 .card-tag:hover {
   background: #aaa;
-  color: black;
+  color: #fff;
 }
 
 .card-media {
@@ -172,7 +173,6 @@ html {
 }
 .btn-group__item {
   border: none;
-  /* min-width: 6rem; */
   padding: 1.5rem 3rem;
   background-color: rgb(255, 255, 255);
   cursor: pointer;
