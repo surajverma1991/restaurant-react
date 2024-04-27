@@ -7,8 +7,12 @@
   font-family: "Source Sans Pro", sans-serif;
 }
 
-html {
-  background: #faf7f2;
+:root {
+  --background: #faf7f2;
+}
+
+body {
+  background: var(--background);
   box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 14px;
