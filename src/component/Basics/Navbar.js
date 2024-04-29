@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navbar = ({ filterItem, menuList }) => {
+const Navbar = ({ filterItem, menuList, activeLink }) => {
   return (
     <>
       <nav className="navbar">
@@ -8,9 +8,9 @@ const Navbar = ({ filterItem, menuList }) => {
           {menuList.map((curElem, id) => {
             return (
               <button
-                className="btn-group__item"
+                className={`btn-group__item ${activeLink === id ? "activeLink" : ""}`}
                 key={id}
-                onClick={() => filterItem(curElem)}
+                onClick={() => filterItem(curElem, id)}
               >
                 {curElem}
               </button>

@@ -16,8 +16,9 @@ const uniqueList = [
 const Resturant = () => {
   const [menuData, setMenuData] = useState(Menu);
   const [menuList] = useState(uniqueList);
+  const [activeLink, setActiveLink] = useState(0)
 
-  const filterItem = (category) => {
+  const filterItem = (category, id) => {
     if (category === "All") {
       setMenuData(Menu);
       return;
@@ -28,11 +29,13 @@ const Resturant = () => {
     });
 
     setMenuData(updatedList);
+
+    setActiveLink(id);
   };
 
   return (
     <>
-      <Navbar filterItem={filterItem} menuList={menuList} />
+      <Navbar filterItem={filterItem} menuList={menuList} activeLink={activeLink}/>
       <MenuCard menuData={menuData} />
     </>
   );
